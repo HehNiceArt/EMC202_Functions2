@@ -42,6 +42,8 @@ public class testMethods : MonoBehaviour
     private void OnMouseDown()
     {
        InvokeRepeating("changeColor", delayTime, interval);
+
+        //Drag and drop the object
        screenPoint = Camera.main.WorldToScreenPoint(gameObject.transform.position); 
        offset = gameObject.transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z));
        
