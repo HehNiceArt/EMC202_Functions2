@@ -47,7 +47,7 @@ public class week2Method : MonoBehaviour
 
         //Time.deltaTime - time passed from last frame | 0 -> 1 -> reset to 0
         //Time.time - time passed somce the beginning of cycle
-        //transform.position = Vector3.Lerp(transform.position, pointB.position, moveSpeed * Time.time);
+        transform.position = Vector3.Lerp(transform.position, pointB.position, moveSpeed * Time.time);
         dist = Vector3.Distance(transform.position, pointB.position);
         //Debug.Log(dist);
         if (dist < rangeValue)
